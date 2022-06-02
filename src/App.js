@@ -4,21 +4,22 @@ import Inicio from './Inicio.js';
 import Cadastro from './Cadastro.js';
 import Menu from './Menu.js';
 import Formulario from './Formulario.js';
+import { Routes, Route} from "react-router-dom";
 
 
 const App = () => {
 
   require("./App.css");
 
-  const [tela, mudaTela] = React.useState(0);
-
   return (
    <div>
 
-   
-      
-      <Cadastro/>
-
+   <Menu/>
+   <Inicio/>
+   <Routes>
+        <Route path="/Login" element={<Formulario />} />
+        <Route path="/Cadastro" element={<Cadastro />} />
+    </Routes>
 
       
    </div> 

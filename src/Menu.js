@@ -1,13 +1,15 @@
-const Menu = (props) => {
+import { Link } from "react-router-dom";
+import React from 'react';
 
- const quantidade_jogos = props.quantidade_jogos
+
+
+const Menu = (props) => {
 
     require("./Menu.css");
     
     return(
         <div>
         <div className="menu">
-
                  <div>
                     <input type="checkbox" id="check"/>
                     <label for="check" id="icone"><i class="fa-solid fa-bars"></i></label>
@@ -42,12 +44,10 @@ const Menu = (props) => {
             <a href="#"> Top Memes </a>
             <a href="#"> Museu de Memes </a>
             <a href="#"> Criadores </a>
-
+            <Link to="/Login">Login</Link> <Link to="/Cadastro">Cadastro</Link> 
             <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
 
-            <a href="#"> Cadastro </a>
-
-            <a href="#"> Login </a>            
+                    
         </div>
     </div>    
         

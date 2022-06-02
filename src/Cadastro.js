@@ -1,5 +1,6 @@
 import { useState } from "react";
 import pintorIMG from "./pintor.svg";
+import { Link } from "react-router-dom";
 
 const Cadastro = () => {
 
@@ -66,14 +67,14 @@ const Cadastro = () => {
             </div>
 
             <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+              <button className="login-form-btn">Cadastro</button>
             </div>
 
             <div className="text-center">
               <span className="txt1">Já possui uma conta? </span>
-              <a className="txt2" href="#">
+              <Link to="/Login" className="txt2" href="#">
                 Login
-              </a>
+              </Link>
             </div>
           </form>
         </div>

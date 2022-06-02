@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from "react";
-import Menu from './Menu.js';
+import { Link } from "react-router-dom";
+
 
 
 const Formulario = () => {
@@ -12,9 +13,8 @@ const Formulario = () => {
   
     return (
       <div>
-        <Menu/>
       <div className="container">
-      <div className="container-login">
+      <div className="coontainer-login">
         <div className="wrap-login">
           <form className="login-form">
             <span className="login-form-title"> Bem vindo </span>
@@ -47,9 +47,9 @@ const Formulario = () => {
 
             <div className="text-center">
               <span className="txt1">Não possui conta? </span>
-              <a className="txt2" href="#">
+              <Link to="/Cadastro" className="txt2" href="#">
                 Criar conta
-              </a>
+              </Link>
             </div>
           </form>
         </div>

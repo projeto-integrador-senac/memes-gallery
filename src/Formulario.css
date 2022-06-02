@@ -14,7 +14,7 @@ body, html {
   margin: 0 auto;
 }
 
-.container-login {
+.coontainer-login {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -22,12 +22,13 @@ body, html {
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background-color: rgb(157, 183, 255);
+  background-image: linear-gradient(to top, #21d4fd -80%, #b721ff );
 }
 
 .wrap-login {
-  width: 390px;
-  background-color: #333;
+  height: 590px;
+  width:690px;
+  background-color: rgba(51, 51, 51, 0.671);
   border-radius: 10px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
@@ -96,10 +97,11 @@ body, html {
   -moz-transition: all 0.4s;
   transition: all 0.4s;
   background: #0425fc;
-  background: -webkit-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -o-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -moz-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: linear-gradient(to left, #242F9B, #9BA3EB);
+  color: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
 .focus-input::after {
@@ -159,10 +161,11 @@ body, html {
   width: 100%;
   height: 50px;
   background: #000000;
-  background: -webkit-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -o-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -moz-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: linear-gradient(to left, #242F9B, #9BA3EB);
+  transition: ease-in-out 0.5s;
+  background-image: linear-gradient(to left, #21d4fd, #b721ff, #b721ff, #21d4fd );
+  background-size:300%;
+    background-position: 0 0;
+    -webkit-appearance: none;
 }
 
 .login-form-btn:hover {

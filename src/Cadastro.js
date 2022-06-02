@@ -1,23 +1,26 @@
-
-import Menu from "./Menu.js";
 import { useState } from "react";
+import pintorIMG from "./pintor.svg";
 
 const Cadastro = () => {
 
-  require("./Formulario.css");
+  require("./Cadastro.css");
   const [email, setEmail] = useState("");
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [cpassword, setCpassword] = useState("");
   
   
     return (
      <div>
-         <Menu/>
-
          <div className="container">
       <div className="container-login">
         <div className="wrap-login">
+        <span className="imagem">
+          <p>ENTRE AGORA MESMO PARA MAIOR COMUNIDADE DE CRIADORES DE MEMES</p>
+             <img src={pintorIMG} />
+          </span> 
           <form className="login-form">
+        
             <span className="login-form-title"> Cadastre-se </span>
 
            <br></br>
@@ -29,7 +32,7 @@ const Cadastro = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <span className="focus-input" data-placeholder="Seu melhor email"></span>
+              <span className="focus-input" data-placeholder="Email"></span>
             </div>
 
             <div className="wrap-input">
@@ -39,7 +42,7 @@ const Cadastro = () => {
                 value={user}
                 onChange={(e) => setUser(e.target.value)}
               />
-              <span className="focus-input" data-placeholder="Um nome de Usuario"></span>
+              <span className="focus-input" data-placeholder="Nome de Usuario"></span>
             </div>
 
             <div className="wrap-input">
@@ -56,8 +59,8 @@ const Cadastro = () => {
               <input
                 className={password !== "" ? "has-val input" : "input"}
                 type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                value={cpassword}
+                onChange={(e) => setCpassword(e.target.value)}
               />
               <span className="focus-input" data-placeholder="Confirme sua senha"></span>
             </div>

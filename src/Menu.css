@@ -1,29 +1,45 @@
+@media only screen and (min-device-width: 1024px) {
+	.PC{
+		background: #b721ff ;
+    display: flex;
+    justify-content: space-between;
+    
+	}
 
 
+	.PC a{
+		color: #540b75;
+		margin: 10px;
+		text-decoration: none;
+		margin-left: 5px;
+	}
+	
+	.menu{
+		display: none;
+	}
+	
+	}
+
+
+
+
+@media only screen and (max-device-width: 1024px){
+	
+.PC{
+	display: none;
+}
 .menu{
-    background: #242F9B;
+    background: #b721ff ;
     display: flex;
     justify-content: space-between;
     padding: 15px;
 }
 
 .menu a{
-    color: #fff;
+    color: #540b75;
     margin: 10px;
     text-decoration: none;
 }
-
-.menu strong {
-    color: #fff;
-    padding: 4px;
-    border: 1px ;
-    border-radius: 7px;
-}
-
-.menu img{
-    width: 220px;
-}
-
 
 *{
 	margin: 0px;
@@ -35,9 +51,10 @@ body{
 }
 #icone {
 	cursor: pointer;
-	padding: 15px;
+	padding: 5px;
     position: absolute;
 	z-index: 1;
+	color: #540b75;
 }
 
 #check{
@@ -46,19 +63,19 @@ body{
 }
 
 .barra{
-	background-color: #242F9B;
-	height: 450px;
+	background-image: linear-gradient(to top, #2899b3 -100%, #b721ff );
+	height: 350px;
 	width: 300px;
 	position: absolute;
 	left: -300px;
-	transition: all .2s linear;
+	transition: all 0.1s linear;
     margin-top: 10px;
     border-radius: 5px;
 }
 
 .barra .link{
 	list-style: none;
-	background-color: #646FD4;
+	background-color: #7a11aa;
 }
 
 nav{
@@ -75,20 +92,24 @@ nav a{
 	font-family: 'Arial';
 	font-size: 12pt;
 	padding: 20px;
-	transition:  all .2s linear;
+	transition:  all 0.1s linear ;
 	opacity: 0;
 	margin-top: 200px;
 }
 .link:hover{
-	background-color: #9BA3EB;
+	background-color: #500d6e;
 }
 
-#check:hover ~ .barra nav a .link{
+#check:checked ~ .barra nav a .link{
 		opacity: 1;
-		margin-top: 0;
-		transition-delay: .2s;
+		margin-top: -25px;
+		
 }
-#check:hover ~ .barra{
-		transform: translateX(300px);
+#check:checked ~ .barra{
+		transform: translate(300px);
 
 }
+
+}
+
+

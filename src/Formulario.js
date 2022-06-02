@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import Menu from './Menu.js';
 
 
 const Formulario = () => {
@@ -10,6 +11,8 @@ const Formulario = () => {
   
   
     return (
+      <div>
+        <Menu/>
       <div className="container">
       <div className="container-login">
         <div className="wrap-login">
@@ -52,6 +55,7 @@ const Formulario = () => {
         </div>
       </div>
     </div>
+  </div>
     );
   }
   

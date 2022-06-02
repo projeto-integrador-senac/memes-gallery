@@ -16,8 +16,8 @@ const App = () => {
    <div>
 
    
-      <Menu/>
-      <Formulario/>
+      
+      <Cadastro/>
 
 
       

@@ -1,25 +1,26 @@
 import { useState } from "react";
-import pintorIMG from "./pintor.svg";
+import { Link } from "react-router-dom";
+import pintorIMG from "../pintor.svg";
 
 const Cadastro = () => {
 
-  require("./Cadastro.css");
-  const [email, setEmail] = useState("");
+  require("./Cadastroo.css");
+  const [nome, setNome] = useState("");
   const [user, setUser] = useState("");
   const [password, setPassword] = useState("");
   const [cpassword, setCpassword] = useState("");
   
   
     return (
-     <div>
-         <div className="container">
-      <div className="container-login">
-        <div className="wrap-login">
-        <span className="imagem">
-          <p>ENTRE AGORA MESMO PARA MAIOR COMUNIDADE DE CRIADORES DE MEMES</p>
-             <img src={pintorIMG} />
+     <div className="body">
+         <div className="Container">
+      <div className="Container-login">
+        <div className="Wrap-login">
+        <span className="Imagem">
+          <p>CADASTRE-SE AGORA MESMO NA MAIOR COMUNIDADE DE CRIADORES DE MEMES</p>
+             <img className="fds" src={pintorIMG} />
           </span> 
-          <form className="login-form">
+          <form className="Loogin-form">
         
             <span className="login-form-title"> Cadastre-se </span>
 
@@ -27,12 +28,12 @@ const Cadastro = () => {
 
             <div className="wrap-input">
               <input
-                className={email !== "" ? "has-val input" : "input"}
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                className={nome !== "" ? "has-val input" : "input"}
+                type="text"
+                value={nome}
+                onChange={(e) => setNome(e.target.value)}
               />
-              <span className="focus-input" data-placeholder="Email"></span>
+              <span className="Focus-input" data-placeholder="Seu nome"></span>
             </div>
 
             <div className="wrap-input">
@@ -42,7 +43,7 @@ const Cadastro = () => {
                 value={user}
                 onChange={(e) => setUser(e.target.value)}
               />
-              <span className="focus-input" data-placeholder="Nome de Usuario"></span>
+              <span className="Focus-input" data-placeholder="Nome de Usuario"></span>
             </div>
 
             <div className="wrap-input">
@@ -52,7 +53,7 @@ const Cadastro = () => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
-              <span className="focus-input" data-placeholder="Senha"></span>
+              <span className="Focus-input" data-placeholder="Senha"></span>
             </div>
 
             <div className="wrap-input">
@@ -62,18 +63,18 @@ const Cadastro = () => {
                 value={cpassword}
                 onChange={(e) => setCpassword(e.target.value)}
               />
-              <span className="focus-input" data-placeholder="Confirme sua senha"></span>
+              <span className="Focus-input" data-placeholder="Confirme sua senha"></span>
             </div>
 
-            <div className="container-login-form-btn">
-              <button className="login-form-btn">Login</button>
+            <div className="Container-login-form-btn">
+              <button className="Login-form-btn">Criar Conta!</button>
             </div>
 
-            <div className="text-center">
-              <span className="txt1">Já possui uma conta? </span>
-              <a className="txt2" href="#">
+            <div className="Text-center">
+              <span className="Txt1">Já possui uma conta? </span>
+              <Link to="/Login" className="Txt2" href="#">
                 Login
-              </a>
+              </Link>
             </div>
           </form>
         </div>

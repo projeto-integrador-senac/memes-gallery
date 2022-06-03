@@ -1,21 +1,26 @@
 import React from 'react';
 import { useState } from "react";
-import Menu from './Menu.js';
+import { Link } from "react-router-dom";
+import pintoraIMG from "./pintora.svg";
 
 
-const Formulario = () => {
+const Login = () => {
 
-    require("./Formulario.css");
+    require('./Login.css')
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
   
   
     return (
       <div>
-        <Menu/>
+        
       <div className="container">
       <div className="container-login">
         <div className="wrap-login">
+        <span className="imagem">
+          <p>ENTRE E FAÇA MAIS "MEMES" MAIS OBRAS DE ARTE</p>
+             <img className="fdss" src={pintoraIMG} />
+          </span> 
           <form className="login-form">
             <span className="login-form-title"> Bem vindo </span>
 
@@ -47,9 +52,9 @@ const Formulario = () => {
 
             <div className="text-center">
               <span className="txt1">Não possui conta? </span>
-              <a className="txt2" href="#">
+              <Link to="/Cadastro" className="txt2" href="#">
                 Criar conta
-              </a>
+              </Link>
             </div>
           </form>
         </div>
@@ -59,4 +64,4 @@ const Formulario = () => {
     );
   }
   
-  export default Formulario;
+  export default Login;

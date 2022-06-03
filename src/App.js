@@ -1,25 +1,26 @@
 import React from 'react';
-
+import { Routes, Route, Router } from "react-router-dom";
 import Inicio from './Inicio.js';
-import Cadastro from './Cadastro.js';
+import Cadastro from './assets/Cadastro.js';
 import Menu from './Menu.js';
-import Formulario from './Formulario.js';
+import Login from './Login.js';
 
 
 const App = () => {
 
-  require("./App.css");
-
-  const [tela, mudaTela] = React.useState(0);
-
   return (
-   <div>
+   <div >
 
    
       
-      <Cadastro/>
-
-
+      
+      <div className='fodase'>
+        <Menu/>
+      </div>
+      <Routes>
+        <Route path="/Login" element={<Login/>} ></Route>
+        <Route path="/Cadastro" element={<Cadastro/>} ></Route>
+      </Routes>
       
    </div> 
   );

@@ -1,6 +1,10 @@
-const Menu = (props) => {
+import React from 'react';
+import { Link } from "react-router-dom";
 
- const quantidade_jogos = props.quantidade_jogos
+
+const Menu = () => {
+
+ 
 
     require("./Menu.css");
     
@@ -38,16 +42,18 @@ const Menu = (props) => {
           
         </div>
         <div className="PC">
-
+            <Link to="/"> Inicio </Link>
             <a href="#"> Top Memes </a>
             <a href="#"> Museu de Memes </a>
             <a href="#"> Criadores </a>
 
             <a href="#"> <i class="fa-solid fa-magnifying-glass"></i></a>
 
-            <a href="#"> Cadastro </a>
+            
 
-            <a href="#"> Login </a>            
+            <Link to="/Login"> Login </Link>
+
+            <Link to="/Cadastro"> Cadastro </Link>          
         </div>
     </div>    
         

@@ -5,29 +5,33 @@
   box-sizing: border-box;
 }
 
-body, html {
+body {
   font-family: Nunito, sans-serif;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
-.container {
+.Container {
   width: 100%;
   margin: 0 auto;
+  
 }
 
-.container-login {
+.Container-login {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   padding: 15px;
-  background-color: rgb(157, 183, 255);
+  background-image: linear-gradient(to top, #21d4fd -80%, #b721ff );
 }
 
-.wrap-login {
-  width: 390px;
-  background-color: #333;
+.Wrap-login {
+  height: 590px;
+  width:690px;
+  background-color: rgba(51, 51, 51, 0.671);
   border-radius: 10px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
@@ -54,6 +58,7 @@ body, html {
 .wrap-input {
   width: 100%;
   position: relative;
+  text-align: center;
   border-bottom: 2px solid #adadad;
   margin-bottom: 37px;
 }
@@ -71,7 +76,7 @@ body, html {
   font-family: Nunito, sans-serif;
 }
 
-.focus-input {
+.Focus-input {
   position: absolute;
   display: block;
   width: 100%;
@@ -83,7 +88,7 @@ body, html {
   font-family: Nunito, sans-serif;
 }
 
-.focus-input::before {
+.Focus-input::before {
   content: "";
   display: block;
   position: absolute;
@@ -95,17 +100,18 @@ body, html {
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
   transition: all 0.4s;
-  background: #0425fc;
-  background: -webkit-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -o-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -moz-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: linear-gradient(to left, #242F9B, #9BA3EB);
+  background: #6a7dfe;
+  color: #adadad;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
-.focus-input::after {
+.Focus-input::after {
   font-family: Nunito, sans-serif;
   font-size: 15px;
-  color: #999999;
+  color:  #adadad;
   line-height: 1.2;
   content: attr(data-placeholder);
   display: block;
@@ -124,29 +130,29 @@ body, html {
   outline: 0;
 }
 
-.input:focus+.focus-input::after {
+.input:focus+.Focus-input::after {
   top: -15px;
 }
 
-.input:focus+.focus-input::before {
+.input:focus+.Focus-input::before {
   width: 100%;
 }
 
-.has-val+.focus-input::after {
+.has-val+.Focus-input::after {
   top: -15px;
 }
 
-.has-val+.focus-input::before {
+.has-val+.Focus-input::before {
   width: 100%;
 }
 
-.container-login-form-btn {
+.Container-login-form-btn {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 13px;
 }
-.login-form-btn {
+.Login-form-btn {
   font-size: 15px;
   border: none;
   border-radius: 10px;
@@ -158,34 +164,68 @@ body, html {
   align-items: center;
   width: 100%;
   height: 50px;
-  background: #000000;
-  background: -webkit-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -o-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: -moz-linear-gradient(to left, #242F9B, #9BA3EB);
-  background: linear-gradient(to left, #242F9B, #9BA3EB);
+  background: #6a7dfe;
+  transition: ease-in-out 0.5s;
+  background-image: linear-gradient(to left, #21d4fd, #b721ff, #b721ff, #21d4fd );
+  background-size:300%;
+    background-position: 0 0;
+    -webkit-appearance: none;
 }
 
-.login-form-btn:hover {
+.Login-form-btn:hover {
   cursor: pointer;
+  transform: scale(1.01);
+  background-position: 100% 0;
 }
 
-.text-center {
+.Text-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
-.txt1 {
+.Txt1 {
   font-size: 14px;
   color: #adadad;
   line-height: 1.5;
   padding-right: 5px;
 }
 
-.txt2 {
+.Txt2 {
   font-size: 14px;
   color: #6a7dfe;
   line-height: 1.5;
   text-decoration: none;
+}
+
+.Imagem{
+  display: flex;
+  font-family: Nunito, sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: left;
+  width: 35vw;
+  left: 10px;
+  top: 220px;
+  position: absolute;
+  color: #fff;
+}
+
+.fds{
+  transform: translateY(0px);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(30px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
 }

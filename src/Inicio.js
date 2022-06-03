@@ -22,7 +22,6 @@ const Inicio = () =>{
     <p>Jogos Adicionados: <strong> {quantidade_jogos} </strong></p>
     <button onClick={() => adicionaJogo(quantidade_jogos + 1)}>Adicionar Jogo</button>
     </div>
-    <Menu quantidade_jogos= {quantidade_jogos} />
     <Vitrine/>
 
     <div className="container">
